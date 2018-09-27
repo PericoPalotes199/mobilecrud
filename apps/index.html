@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Senarai Pelajar</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="hashids.min.js"></script>
+    <script src="mobilecrud.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Senarai Pelajar</h1>
+    </div>
+
+    <div data-role="content">
+        <form id="borang">
+            <input type="hidden" id="idpelajar">
+            <label>Nama <input type="text" id="nama"></label>
+            <label>No. K.P. <input type="text" id="nokp"></label>
+            <label>No. Matrik <input type="text" id="nomatrik"></label>
+            <button data-inline="true" type="button" onclick="simpan();">Simpan</button>
+            <button data-inline="true" type="button" onclick="batal();">Batal</button>
+            <br/><br/>
+        </form>
+
+        <table data-role="table" class="ui-responsive table-stripe">
+            <thead>
+            <tr>
+                <th>Bil</th>
+                <th>Nama</th>
+                <th>No. K.P.</th>
+                <th>No. Matrik</th>
+                <th>Tindakan</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div data-role="footer">
+        <h2>Mobile CRUD</h2>
+    </div>
+</div>
+</body>
+</html>
